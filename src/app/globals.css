@@ -7,6 +7,7 @@
 html,
 body {
   max-width: 100vw;
+  height: 100dvh;
 }
 
 a {
@@ -14,11 +15,19 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  height: 50px;
+  position: fixed;
+  inset: 65px 0 0 0;
+  z-index: 3;
+  text-align: center;
+}
+
 section {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   padding-bottom: 200px;
-  background-color: #f1bace;
+  background-color: #f8bbc6;
   white-space: nowrap;
   overflow: auto;
   position: relative;
@@ -44,4 +53,18 @@ img {
 
 img:first-child {
   margin-left: 10vw;
+}
+
+p {
+  height: 30px;
+  position: fixed;
+  inset: calc(100dvh - 100px) 0 15px 0;
+  z-index: 3;
+  text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  img {
+    width: 75%;
+  }
 }
